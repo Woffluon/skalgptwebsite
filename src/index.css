@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes door-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes door-right {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes light-burst {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.5); opacity: 0.8; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+@keyframes light-fade {
+  0% { opacity: 0; }
+  50% { opacity: 0.3; }
+  100% { opacity: 0; }
+}
+
+@keyframes logo-reveal {
+  0% { opacity: 0; transform: scale(0.8); }
+  20% { opacity: 1; transform: scale(1.1); }
+  40% { transform: scale(1); }
+  80% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.9); }
+}
+
+@keyframes content-fade {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.animate-door-left {
+  animation: door-left 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-door-right {
+  animation: door-right 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-light-burst {
+  animation: light-burst 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-light-fade {
+  animation: light-fade 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-logo-reveal {
+  animation: logo-reveal 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-content-fade {
+  animation: content-fade 2.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Keep existing animations */
+/* ... rest of the existing CSS ... */
